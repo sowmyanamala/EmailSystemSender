@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html ng-app="emailApp">
+<head>
+  <title>Email System</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.3/angular.min.js"></script>
+  <script src="app.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f4f4f4;
+    }
+    .container {
+      background: white;
+      padding: 20px 30px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      text-align: center;
+      width: 300px;
+    }
+    h1 {
+      margin-bottom: 20px;
+      font-size: 1.5rem;
+      color: #333;
+    }
+    input {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+    button {
+      width: 50%;
+      padding: 10px;
+      background-color: #28a745;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 15px;
+    }
+    button:hover {
+      background-color: #218838;
+    }
+    p {
+      margin-top: 15px;
+      color: #555;
+    }
+  </style>
+</head>
+<body ng-controller="MainController">
+  <div class="container">
+    <h1>Email Registration</h1>
+    <form ng-submit="submitForm()">
+      <input type="text" ng-model="name" placeholder="Enter name" required>
+      <input type="email" ng-model="email" placeholder="Enter email" required>
+      <button type="submit">Submit</button>
+    </form>
+    <p>{{message}}</p>
+  </div>
+</body>
+</html>
+
